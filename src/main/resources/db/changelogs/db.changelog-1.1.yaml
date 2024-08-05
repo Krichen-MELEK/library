@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1
+      author: MK
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: title
+                  type: varchar(255)
+              - column:
+                  name: price
+                  type: double
+              - column:
+                  name: publication_date
+                  type: date
+              - column:
+                  name: author_id
+                  type: uuid
+                  constraints:
+                    secondaryKey: true
